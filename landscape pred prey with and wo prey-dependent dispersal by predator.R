@@ -197,20 +197,8 @@ for (i in 1:rep){
 	}
 }
 
-
-
 gen = seq(1:T)
 mx = max(c(Nlandabund,Plandabund))
 mn = min(c(Nlandabund,Plandabund))
 plot(Nlandabund  ~ gen, type="o", xlab = "Generation", ylab = "Total abundance in landscape", col="green")
 points(Plandabund ~ gen, type="o",col="blue")
-
-output = cbind(seq(1:rep),Nabund,Pabund,difNabund,difPabund,HabA[,1],HabB[,1],TotHab[,1],VarHab[,1],VarLocHab[,1],StatTotalHab[,1])
-colnames(output) = c("Run","Nabund0","Nabund.1","Nabund.2","Nabund.3","Nabund.4","Nabund.5","Nabund.6","Nabund.7","Nabund.8","Nabund.9","Nabund1",
-	"Pabund0","Pabund.1","Pabund.2","Pabund.3","Pabund.4","Pabund.5","Pabund.6","Pabund.7","Pabund.8","Pabund.9","Pabund1",
-	"difNabund.1","difNabund.2","difNabund.3","difNabund.4","difNabund.5","difNabund.6","difNabund.7","difNabund.8","difNabund.9","difNabund1",
-	"difPabund.1","difPabund.2","difPabund.3","difPabund.4","difPabund.5","difPabund.6","difPabund.7","difPabund.8","difPabund.9","difPabund1",
-	"HabA","HabB","TotHab","VarHab","VarLocHab","StatTotalHab")
-output
-#write.table(output,"output.xls",row.names=FALSE)
-
